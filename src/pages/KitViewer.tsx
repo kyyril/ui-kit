@@ -109,32 +109,18 @@ const KitViewer = () => {
 
   return (
     <>
-      {/* Fixed Header */}
-      <header className="fixed top-0 left-0 right-0 bg-gray-900 border-b border-gray-800 z-50 shadow-lg">
-        <div className="px-6 py-4 flex items-center justify-between">
-          <button
-            onClick={() => navigate("/")}
-            className="hover:opacity-80 transition-opacity text-white font-bold text-lg"
-          >
-            ← Back
-          </button>
-          <div className="flex items-center gap-3">
-            <div
-              className="w-12 h-12 rounded-lg flex items-center justify-center text-2xl shadow-md"
-              style={{ backgroundColor: "white" }}
-            >
-              {kit.icon}
-            </div>
-            <h2 className="text-2xl font-bold text-white">{kit.name}</h2>
-          </div>
-          <div className="w-20"></div>
-        </div>
-      </header>
+      {/* Breadcrumb */}
+      <button
+        onClick={() => navigate("/")}
+        className="fixed top-4 left-4 z-50 hover:opacity-80 transition-opacity bg-gray-900 text-white font-bold text-lg px-4 py-2 rounded shadow-lg"
+      >
+        ← Back
+      </button>
 
       {/* Render UI Kit Component and apply kit-specific body classes so
           kits that expect body-level styles (from their own index.html)
           show correct background and text color when embedded here. */}
-      <div className={"min-h-screen"} style={{ marginTop: "80px" }}>
+      <div className={"min-h-screen"}>
         {KitComponent ? (
           <Suspense fallback={null}>
             <KitComponent />

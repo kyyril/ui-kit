@@ -66,8 +66,14 @@ export default {
           tape: 'rgba(255, 255, 255, 0.4)',
         },
         neo: {
-          bg: '#f0f0f0',
-          text: '#374151',
+          bg: '#fffdf5',
+          text: '#0f0f0f',
+          yellow: '#ffdc00',
+          pink: '#ff6b6b',
+          blue: '#4dabf7',
+          green: '#51cf66',
+          purple: '#cc5de8',
+          orange: '#ff922b',
         },
         term: {
           black: '#000000',
@@ -83,7 +89,8 @@ export default {
       boxShadow: {
         neo: '4px 4px 0px 0px rgba(0,0,0,1)',
         'neo-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
-        'neo-lg': '6px 6px 0px 0px rgba(0,0,0,1)',
+        'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+        'neo-hover': '6px 6px 0px 0px rgba(0,0,0,1)',
         'clay-md': '8px 8px 16px rgba(166, 180, 200, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.8), inset 2px 2px 4px rgba(255, 255, 255, 0.5), inset -2px -2px 4px rgba(0, 0, 0, 0.05)',
         'clay-sm': '5px 5px 10px rgba(166, 180, 200, 0.4), -5px -5px 10px rgba(255, 255, 255, 0.8), inset 1px 1px 2px rgba(255, 255, 255, 0.5), inset -1px -1px 2px rgba(0, 0, 0, 0.05)',
         'clay-inner': 'inset 6px 6px 12px rgba(166, 180, 200, 0.3), inset -6px -6px 12px rgba(255, 255, 255, 0.9)',
@@ -117,6 +124,7 @@ export default {
         'glitch': 'glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite',
         'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'wiggle': 'wiggle 1s ease-in-out infinite',
+        'marquee': 'marquee 20s linear infinite',
       },
       keyframes: {
         float: {
@@ -139,6 +147,10 @@ export default {
           '0%, 100%': { transform: 'rotate(-2deg)' },
           '50%': { transform: 'rotate(2deg)' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
       },
       transitionTimingFunction: {
         'elastic': 'cubic-bezier(0.68, -0.55, 0.265, 1.55)',
@@ -146,6 +158,9 @@ export default {
       borderRadius: {
         'wobbly-1': '255px 15px 225px 15px / 15px 225px 15px 255px',
         'wobbly-2': '15px 225px 15px 255px / 255px 15px 225px 15px',
+      },
+      borderWidth: {
+        '3': '3px',
       },
     },
   },
