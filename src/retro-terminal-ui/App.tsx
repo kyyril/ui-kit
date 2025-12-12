@@ -56,7 +56,7 @@ const App = () => {
             <div className="text-4xl md:text-6xl uppercase tracking-tighter animate-pulse mb-2 text-term-green shadow-[0_0_15px_rgba(51,255,0,0.6)]">
               Term_UI<span className="text-term-green-dim">.SYS</span>
             </div>
-            <p className="text-xl uppercase opacity-80">> System Ready // User: ADMIN</p>
+            <p className="text-xl uppercase opacity-80">{'>'} System Ready // User: ADMIN</p>
           </div>
           <div className="text-right">
              <div className="text-2xl">{currentTime}</div>
@@ -78,7 +78,7 @@ const App = () => {
               {/* Variant Row */}
               <div className="space-y-4">
                 <h3 className="text-lg uppercase border-b border-dashed border-term-green/40 pb-2 mb-4 w-full flex justify-between">
-                  <span>> Select_Operation_Mode</span>
+                  <span>{'>'} Select_Operation_Mode</span>
                   <span className="animate-pulse">_</span>
                 </h3>
                 
@@ -94,7 +94,7 @@ const App = () => {
               {/* Sizes Row */}
               <div className="space-y-4 pt-4">
                 <h3 className="text-lg uppercase border-b border-dashed border-term-green/40 pb-2 mb-4 w-full">
-                  > Buffer_Allocation_Size
+                  {'>'} Buffer_Allocation_Size
                 </h3>
                 <div className="flex flex-wrap items-end gap-4 border-l-2 border-term-green pl-4">
                    <Button size="xs" variant="primary">16kb</Button>
@@ -108,7 +108,7 @@ const App = () => {
               {/* Functional Test */}
                <div className="space-y-4 pt-4">
                 <h3 className="text-lg uppercase border-b border-dashed border-term-green/40 pb-2 mb-4 w-full">
-                   > Async_Processes
+                   {'>'} Async_Processes
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   <Button 
@@ -155,19 +155,19 @@ const App = () => {
              <div className="border-2 border-dashed border-slate-600 p-6 flex-grow">
                <ul className="space-y-3 font-mono text-slate-400">
                  <li className="flex justify-between">
-                   <span>> CPU_TEMP:</span>
+                   <span>{'>'} CPU_TEMP:</span>
                    <span className="text-term-green">45°C</span>
                  </li>
                  <li className="flex justify-between">
-                   <span>> MEM_USAGE:</span>
+                   <span>{'>'} MEM_USAGE:</span>
                    <span className="text-term-amber">82%</span>
                  </li>
                  <li className="flex justify-between">
-                   <span>> NETWORK:</span>
+                   <span>{'>'} NETWORK:</span>
                    <span className="text-term-green animate-pulse">ONLINE</span>
                  </li>
                  <li className="flex justify-between">
-                   <span>> UPTIME:</span>
+                   <span>{'>'} UPTIME:</span>
                    <span>04:22:19</span>
                  </li>
                </ul>
@@ -185,7 +185,7 @@ const App = () => {
         {/* Footer Prompt */}
         <footer className="mt-12 border-t-2 border-term-green pt-6 text-xl flex items-center gap-2 animate-pulse">
            <Terminal size={24} />
-           <span>A:\USERS\GUEST\COMMAND></span>
+           <span>A:\USERS\GUEST\COMMAND{'>'}</span>
            <span className="w-3 h-6 bg-term-green block"></span>
         </footer>
 

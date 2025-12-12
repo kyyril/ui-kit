@@ -2,17 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Global resets */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html,
-body,
-#root {
-  width: 100%;
-  height: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -23,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html {
-  scroll-behavior: smooth;
+/* Allow kit backgrounds to show */
+.kit-viewer-container {
+  background: none !important;
 }
