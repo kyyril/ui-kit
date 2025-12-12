@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neo-Brutalist UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Mega:wght@300;400;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Space Grotesk"', 'sans-serif'],
+              display: ['"Lexend Mega"', 'sans-serif'],
+            },
+            colors: {
+              neo: {
+                bg: '#fffdf5', // Warm off-white
+                text: '#0f0f0f',
+                yellow: '#ffdc00', // Vibrant Yellow
+                pink: '#ff6b6b',   // Salmon Pink
+                blue: '#4dabf7',   // Sky Blue
+                green: '#51cf66',  // Lime Green
+                purple: '#cc5de8', // Grape
+                orange: '#ff922b', // Orange
+              }
+            },
+            boxShadow: {
+              'neo': '4px 4px 0px 0px rgba(0,0,0,1)',
+              'neo-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+              'neo-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
+              'neo-hover': '6px 6px 0px 0px rgba(0,0,0,1)',
+            },
+            borderWidth: {
+              '3': '3px',
+            },
+            animation: {
+              'marquee': 'marquee 20s linear infinite',
+            },
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-100%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-neo-bg text-neo-text font-sans antialiased overflow-x-hidden min-h-screen bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:20px_20px]">
+    <div id="root" class="min-h-screen"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

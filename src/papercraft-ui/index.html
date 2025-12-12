@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Papercraft UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Nunito"', 'sans-serif'],
+              display: ['"Permanent Marker"', 'cursive'],
+            },
+            colors: {
+              paper: {
+                bg: '#f8f5f2', // Warm textured white
+                card: '#ffffff',
+                text: '#2c3e50',
+                blue: '#4aa3df',
+                red: '#e74c3c',
+                yellow: '#f1c40f',
+                green: '#2ecc71',
+                purple: '#9b59b6',
+                tape: 'rgba(255, 255, 255, 0.4)',
+              }
+            },
+            boxShadow: {
+              'paper': '2px 3px 10px rgba(0, 0, 0, 0.05), 0 10px 25px -5px rgba(0, 0, 0, 0.05)',
+              'paper-hover': '4px 8px 15px rgba(0, 0, 0, 0.08), 0 15px 30px -5px rgba(0, 0, 0, 0.08)',
+              'paper-active': '1px 1px 3px rgba(0, 0, 0, 0.1)',
+              'card': '0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03)',
+            },
+            backgroundImage: {
+              'noise': "url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.08%22/%3E%3C/svg%3E')",
+            },
+            animation: {
+              'wiggle': 'wiggle 1s ease-in-out infinite',
+              'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+              wiggle: {
+                '0%, 100%': { transform: 'rotate(-2deg)' },
+                '50%': { transform: 'rotate(2deg)' },
+              },
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .tape-corner {
+        position: relative;
+      }
+      .tape-corner::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-2deg);
+        width: 60px;
+        height: 20px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-left: 1px dashed rgba(0,0,0,0.1);
+        border-right: 1px dashed rgba(0,0,0,0.1);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+        z-index: 10;
+        opacity: 0.8;
+      }
+      /* Custom scrollbar to match */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1; 
+        border-radius: 5px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-paper-bg text-paper-text font-sans antialiased overflow-x-hidden min-h-screen relative">
+    <!-- Noise texture overlay -->
+    <div class="fixed inset-0 pointer-events-none z-[-1] opacity-50 bg-noise"></div>
+    <div id="root" class="min-h-screen"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "name": "Retro Terminal UI",
+  "description": "A lo-fi, monospace component library inspired by retro computing, CLI interfaces, and CRT monitors.",
+  "requestFramePermissions": []
+}

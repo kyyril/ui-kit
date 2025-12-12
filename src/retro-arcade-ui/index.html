@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Arcade UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"VT323"', 'monospace'],
+              pixel: ['"Press Start 2P"', 'cursive'],
+            },
+            colors: {
+              arcade: {
+                bg: '#2e0f47', // Deep purple
+                panel: '#1a0b2e',
+                text: '#e0e0e0',
+                neon: '#ff00ff',
+                cyan: '#00ffff',
+                yellow: '#ffcc00',
+                green: '#00ff33',
+                red: '#ff3333',
+                white: '#ffffff',
+              }
+            },
+            boxShadow: {
+              'pixel': '4px 4px 0px 0px rgba(0,0,0,1)',
+              'pixel-lg': '8px 8px 0px 0px rgba(0,0,0,1)',
+              'pixel-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
+              'pixel-active': '0px 0px 0px 0px rgba(0,0,0,1)',
+            },
+            backgroundImage: {
+              'checkers': 'linear-gradient(45deg, #260c3c 25%, transparent 25%), linear-gradient(-45deg, #260c3c 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #260c3c 75%), linear-gradient(-45deg, transparent 75%, #260c3c 75%)',
+            },
+            animation: {
+              'blink': 'blink 1s step-end infinite',
+              'float-pixel': 'floatPixel 3s steps(10) infinite',
+            },
+            keyframes: {
+              blink: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '0' },
+              },
+              floatPixel: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-4px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        image-rendering: pixelated;
+      }
+      .bg-pixel-grid {
+        background-color: #2e0f47;
+        background-image: 
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 20px 20px;
+      }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 12px;
+        background: #1a0b2e;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #ff00ff;
+        border: 2px solid #1a0b2e;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-pixel-grid text-arcade-text font-sans antialiased overflow-x-hidden min-h-screen">
+    <div id="root" class="min-h-screen"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

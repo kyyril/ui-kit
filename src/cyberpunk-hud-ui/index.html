@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cyberpunk HUD UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Rajdhani"', 'sans-serif'],
+              display: ['"Orbitron"', 'sans-serif'],
+            },
+            colors: {
+              cyber: {
+                bg: '#050510',
+                panel: '#0a0a1f',
+                cyan: '#00f3ff',
+                pink: '#ff00ff',
+                yellow: '#fcee0a',
+                red: '#ff2a2a',
+                green: '#00ff9f',
+                dim: 'rgba(0, 243, 255, 0.1)',
+              }
+            },
+            boxShadow: {
+              'neon-cyan': '0 0 10px rgba(0, 243, 255, 0.5), 0 0 20px rgba(0, 243, 255, 0.3)',
+              'neon-pink': '0 0 10px rgba(255, 0, 255, 0.5), 0 0 20px rgba(255, 0, 255, 0.3)',
+              'neon-green': '0 0 10px rgba(0, 255, 159, 0.5), 0 0 20px rgba(0, 255, 159, 0.3)',
+            },
+            backgroundImage: {
+              'grid-pattern': 'linear-gradient(rgba(0, 243, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 243, 255, 0.1) 1px, transparent 1px)',
+              'scanline': 'linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.5) 50%)',
+            },
+            animation: {
+              'scan': 'scan 4s linear infinite',
+              'glitch': 'glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite',
+              'pulse-fast': 'pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              scan: {
+                '0%': { backgroundPosition: '0 0' },
+                '100%': { backgroundPosition: '0 100%' },
+              },
+              glitch: {
+                '0%': { transform: 'translate(0)' },
+                '20%': { transform: 'translate(-2px, 2px)' },
+                '40%': { transform: 'translate(-2px, -2px)' },
+                '60%': { transform: 'translate(2px, 2px)' },
+                '80%': { transform: 'translate(2px, -2px)' },
+                '100%': { transform: 'translate(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .clip-corner {
+        clip-path: polygon(
+          15px 0, 
+          100% 0, 
+          100% calc(100% - 15px), 
+          calc(100% - 15px) 100%, 
+          0 100%, 
+          0 15px
+        );
+      }
+      .clip-corner-sm {
+        clip-path: polygon(
+          8px 0, 
+          100% 0, 
+          100% calc(100% - 8px), 
+          calc(100% - 8px) 100%, 
+          0 100%, 
+          0 8px
+        );
+      }
+      .bg-scanlines {
+        background-size: 100% 4px;
+        background-image: linear-gradient(rgba(0,0,0,0) 50%, rgba(0,0,0,0.2) 50%);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-cyber-bg text-cyber-cyan font-sans antialiased overflow-x-hidden min-h-screen">
+    <div class="fixed inset-0 bg-[linear-gradient(rgba(18,16,30,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-[100] pointer-events-none bg-[length:100%_4px,6px_100%]"></div>
+    <div id="root" class="min-h-screen relative z-0"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

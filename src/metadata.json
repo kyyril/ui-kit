@@ -1,0 +1,90 @@
+[
+  {
+    "id": "bubble-ui-button-showcase",
+    "name": "Bubble UI",
+    "description": "A playful and bubbly UI kit with smooth animations and organic shapes",
+    "icon": "🫧",
+    "color": "#8B5CF6",
+    "path": "/bubble-ui-button-showcase"
+  },
+  {
+    "id": "clay-pop-ui",
+    "name": "Clay Pop UI",
+    "description": "Colorful and fun UI components with a modern clay aesthetic",
+    "icon": "🎨",
+    "color": "#EC4899",
+    "path": "/clay-pop-ui"
+  },
+  {
+    "id": "cyberpunk-hud-ui",
+    "name": "Cyberpunk HUD UI",
+    "description": "Futuristic UI with neon glows and high-tech appearance",
+    "icon": "🤖",
+    "color": "#06B6D4",
+    "path": "/cyberpunk-hud-ui"
+  },
+  {
+    "id": "kinetik-ui-button-showcase",
+    "name": "Kinetik UI",
+    "description": "Dynamic and energetic UI components with kinetic motion",
+    "icon": "⚡",
+    "color": "#F59E0B",
+    "path": "/kinetik-ui-button-showcase"
+  },
+  {
+    "id": "luminous-ui-kit",
+    "name": "Luminous UI",
+    "description": "Elegant UI kit with luminescent effects and soft glows",
+    "icon": "✨",
+    "color": "#FBBF24",
+    "path": "/luminous-ui-kit"
+  },
+  {
+    "id": "neo-brutalist-ui",
+    "name": "Neo Brutalist UI",
+    "description": "Minimalist UI with bold typography and stark contrasts",
+    "icon": "⬛",
+    "color": "#000000",
+    "path": "/neo-brutalist-ui"
+  },
+  {
+    "id": "neo-pop-ui-kit",
+    "name": "Neo Pop UI",
+    "description": "Modern pop art style UI with vibrant colors and bold outlines",
+    "icon": "🎭",
+    "color": "#10B981",
+    "path": "/neo-pop-ui-kit"
+  },
+  {
+    "id": "papercraft-ui",
+    "name": "Papercraft UI",
+    "description": "Paper-like UI with subtle shadows and clean design",
+    "icon": "📄",
+    "color": "#F3F4F6",
+    "path": "/papercraft-ui"
+  },
+  {
+    "id": "retro-arcade-ui",
+    "name": "Retro Arcade UI",
+    "description": "Nostalgic arcade-style UI with pixel art and bold colors",
+    "icon": "🕹️",
+    "color": "#EF4444",
+    "path": "/retro-arcade-ui"
+  },
+  {
+    "id": "retro-terminal-ui",
+    "name": "Retro Terminal UI",
+    "description": "Classic terminal aesthetic with monospace fonts and green text",
+    "icon": "💻",
+    "color": "#22C55E",
+    "path": "/retro-terminal-ui"
+  },
+  {
+    "id": "sketchbook-ui-button-showcase",
+    "name": "Sketchbook UI",
+    "description": "Hand-drawn aesthetic UI with sketchy borders and playful style",
+    "icon": "🎨",
+    "color": "#3B82F6",
+    "path": "/sketchbook-ui-button-showcase"
+  }
+]

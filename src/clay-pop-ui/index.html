@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clay Pop UI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Fredoka"', 'sans-serif'],
+            },
+            colors: {
+              clay: {
+                bg: '#fff8f0', // Warm cream
+                card: '#ffffff',
+                primary: '#a78bfa', // Soft Purple
+                accent: '#60a5fa', // Soft Blue
+                danger: '#fb7185', // Soft Red
+                success: '#34d399', // Soft Green
+                warning: '#fbbf24', // Soft Yellow
+                text: '#4b5563', // Soft Gray
+              }
+            },
+            boxShadow: {
+              'clay-card': '20px 20px 60px #d9d2cc, -20px -20px 60px #ffffff',
+              'clay-btn': '8px 8px 16px rgba(163, 177, 198, 0.4), -8px -8px 16px rgba(255, 255, 255, 0.8), inset 2px 2px 4px rgba(255, 255, 255, 0.5), inset -2px -2px 4px rgba(0, 0, 0, 0.05)',
+              'clay-btn-pressed': 'inset 6px 6px 10px rgba(163, 177, 198, 0.4), inset -6px -6px 10px rgba(255, 255, 255, 0.8)',
+              'clay-float': '0 20px 30px -10px rgba(0, 0, 0, 0.1)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'bounce-slow': 'bounce 3s infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-clay-bg text-clay-text font-sans antialiased overflow-x-hidden selection:bg-clay-primary selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
